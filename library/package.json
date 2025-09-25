@@ -1,6 +1,6 @@
 {
   "name": "my-needle-library",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "module": "./dist/my-needle-library.js",
   "types": "./dist/types/main.d.ts",

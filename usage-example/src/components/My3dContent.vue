@@ -45,5 +45,18 @@ button {
     background-color: #007BFF;
     color: white;
     cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+    &:active, &:focus {
+        border: none;
+        outline: 2px solid #4f91d8;
+        outline-offset: 2px;
+    }
 }
 </style>

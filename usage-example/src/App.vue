@@ -16,9 +16,15 @@ import My3dContent from './components/My3dContent.vue';
   </div>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
   <My3dContent />
+  <span class="info">
+    Example for a <a target="_blank" href="https://github.com/needle-engine/custom-library-example">
+      custom Needle Engine library
+    </a>
+  </span>
 </template>
 
 <style scoped>
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -32,5 +38,9 @@ import My3dContent from './components/My3dContent.vue';
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.info {
+  margin-top: 1rem;
 }
 </style>
