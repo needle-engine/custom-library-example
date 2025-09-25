@@ -6,9 +6,14 @@ This workflow allows you to easily re-use your custom code in other websites wit
 
 ## Library Structure
 
+The structure is mostly identical to any other Needle Engine project with a few additional files and small modifications for building the library:
+
 - `vite.library.config.ts` - Vite configuration for building the library
 - `src/main.ts` - Main entry point for the library, where you can import Needle Engine and your custom code
 - `package.json` - Project metadata and scripts for building and publishing the library
+  - `build:library` script to build the library
+  - `build:types` script to generate TypeScript declaration files
+  - `publish` script to publish the library to NPM
 
 
 ## Building the Library
