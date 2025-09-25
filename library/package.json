@@ -1,0 +1,56 @@
+{
+  "name": "my-needle-library",
+  "version": "1.0.4",
+  "type": "module",
+  "module": "./dist/my-needle-library.js",
+  "types": "./dist/types/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/my-needle-library.js",
+      "types": "./dist/types/main.d.ts"
+    }
+  },
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "CHANGELOG.md",
+    "dist",
+    "package.json"
+  ],
+  "keywords": [
+    "needle",
+    "needle-engine",
+    "custom-library",
+    "threejs"
+  ],
+  "scripts": {
+    "start": "vite --host",
+    "build:dev": "vite build",
+    "build:production": "vite build -- --production",
+    "@comment": "---- Below are relevant scripts for publishing the library",
+    "build:library": "vite build --config vite.library.config.js && npm run build:types",
+    "build:types": "tsc src/main.ts --skipLibCheck --declaration --emitDeclarationOnly --esModuleInterop --outDir dist/types",
+    "prepublishOnly": "npm run build:library"
+  },
+  "dependencies": {
+    "@needle-tools/engine": "^4.10.0-beta",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "three": "npm:@needle-tools/three@0.169.11"
+  },
+  "devDependencies": {
+    "@needle-tools/helper": "1.11.5",
+    "@types/three": "0.169.0",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
+    "typescript": "^5.0.4",
+    "vite": "<= 4.3.9",
+    "vite-plugin-compression": "^0.5.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/needle-engine/custom-library-example"
+  }
+}

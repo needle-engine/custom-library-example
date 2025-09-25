@@ -1,0 +1,4 @@
+# Ignore binary assets in the library package
+dist/**/*.glb
+dist/**/*.bin
+dist/**/*.gltf

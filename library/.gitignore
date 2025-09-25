@@ -1,0 +1,14 @@
+node_modules/
+assets/
+src/generated/gen.js
+src/generated/meta.json
+dist/
+stats.html
+include/draco/
+include/ktx2/
+include/three/
+include/console/
+include/three-mesh-ui-assets/
+include/fonts/
+include/poster.*
+build.log

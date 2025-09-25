@@ -1,0 +1,24 @@
+{
+  "name": "example-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && npx --yes needle-cloud@latest deploy ./dist --name 'custom-library-example-vue-project' --token" 
+  },
+  "dependencies": {
+    "my-needle-library": "^1.0.4",
+    "vue": "^3.5.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.7",
+    "vue-tsc": "^3.0.7"
+  }
+}
