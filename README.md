@@ -1,12 +1,14 @@
 # Custom Needle Engine Library Example
 
-This web project is setup to work with Unity, Blender or custom code to create your own 3D web experiences with Needle Engine and then publish it as a library to NPM. 
+This web project is setup to work with Unity, Blender or custom code to create your own 3D web experiences with Needle Engine and then publish it as a library to NPM. It is mostly identical to all other Needle Engine projects/templates with a few additions to allow for both testing and developing a custom library or toolset using Needle and also bundling and publishing these custom tools to npm to be easily re-useable in other web projects.
 
 This workflow allows you to easily re-use your custom code in other websites without having to install Needle Engine or other dependencies in the target project.
 
+Please note that a Needle Enterprise license is required to redistribute the Needle Engine package.
+
 ## Library Structure
 
-The structure is mostly identical to any other Needle Engine project with a few additional files and small modifications for building the library:
+The structure is mostly identical to any other Needle Engine project with a few additional files and small modifications for building and publishing the project as a library to NPM (or any other package registry). 
 
 - `vite.library.config.ts` - Vite configuration for building the library
 - `src/main.ts` - Main entry point for the library, where you can import Needle Engine and your custom code
