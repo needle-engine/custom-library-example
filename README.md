@@ -11,8 +11,9 @@ Please note that a Needle Enterprise license is required to redistribute the Nee
 The structure is mostly identical to any other Needle Engine project with a few additional files and small modifications for building and publishing the project as a library to NPM (or any other package registry). 
 
 - `vite.library.config.ts` - Vite configuration for building the library
-- `src/main.ts` - Main entry point for the library, where you can import Needle Engine and your custom code
-- `package.json` - Project metadata and scripts for building and publishing the library
+- `src/main.ts` - Main entry point for the library, where you can import Needle Engine and your custom code. Additionally to needle-engine it now also imports to `register_types` file for making custom scripts available to Needle Engine
+- `package.json` - Added exports and entrypoints when using the library pointing to the `dist` folder which is where the bundled library will be placed. Make sure to update entrypoints to match your custom library name.  
+  Added scripts:
   - `build:library` script to build the library
   - `build:types` script to generate TypeScript declaration files
   - `publish` script to publish the library to NPM
