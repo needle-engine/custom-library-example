@@ -2,6 +2,9 @@ import { defineConfig } from 'vite';
 import viteCompression from 'vite-plugin-compression';
 import basicSsl from '@vitejs/plugin-basic-ssl'
 
+/**
+ * @type {import('vite').UserConfig}
+ */
 export default defineConfig(async ({ command }) => {
 
     const { needlePlugins, useGzip, loadConfig } = await import("@needle-tools/engine/plugins/vite/index.js");

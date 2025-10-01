@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite';
 import basicSsl from '@vitejs/plugin-basic-ssl';
-import typescript2 from 'rollup-plugin-typescript2';
 
+
+/**
+ * @type {import('vite').UserConfig}
+ */
 export default defineConfig(async ({ command }) => {
 
     const { needlePlugins, useGzip, loadConfig } = await import("@needle-tools/engine/plugins/vite/index.js");
@@ -17,6 +20,7 @@ export default defineConfig(async ({ command }) => {
             emptyOutDir: true,
             lib: {
                 entry: "./src/main.ts",
+                fileName: (format, entryName) => `${entryName}.${format}.js`,
                 formats: ["es"]
             },
             rollupOptions: {

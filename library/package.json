@@ -1,13 +1,13 @@
 {
   "name": "my-needle-library",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "type": "module",
-  "module": "./dist/my-needle-library.js",
-  "types": "./dist/types/main.d.ts",
+  "module": "./dist/main.es.js",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/my-needle-library.js",
-      "types": "./dist/types/main.d.ts"
+      "import": "./dist/main.es.js",
+      "types": "./dist/main.d.ts"
     }
   },
   "files": [
@@ -29,7 +29,7 @@
     "build:production": "vite build -- --production",
     "@comment": "---- Below are relevant scripts for publishing the library",
     "build:library": "vite build --config vite.library.config.js && npm run build:types",
-    "build:types": "tsc src/main.ts --skipLibCheck --declaration --emitDeclarationOnly --esModuleInterop --outDir dist/types",
+    "build:types": "tsc src/main.ts --skipLibCheck --declaration --emitDeclarationOnly --esModuleInterop --outdir dist",
     "prepublishOnly": "npm run build:library"
   },
   "dependencies": {
