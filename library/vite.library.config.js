@@ -14,7 +14,11 @@ export default defineConfig(async ({ command }) => {
         base: "./",
         plugins: [
             basicSsl(),
-            needlePlugins(command, needleConfig, {}),
+            needlePlugins(command, needleConfig, {
+                // license: {
+                //     team: "<team_id>", // <-- uncomment and set your team id. The id can be obtained from https://cloud.needle.tools/team, then click the Edit button next to your team name.
+                // }
+            }),
         ],
         build: {
             emptyOutDir: true,
