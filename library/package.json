@@ -33,7 +33,7 @@
     "prepublishOnly": "npm run build:library"
   },
   "dependencies": {
-    "@needle-tools/engine": "^4.10.0-beta",
+    "@needle-tools/engine": "4.11.5",
     "rollup-plugin-typescript2": "^0.36.0",
     "three": "npm:@needle-tools/three@0.169.11"
   },
