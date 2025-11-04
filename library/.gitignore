@@ -12,3 +12,5 @@ include/three-mesh-ui-assets/
 include/fonts/
 include/poster.*
 build.log
+
+.DS_Store

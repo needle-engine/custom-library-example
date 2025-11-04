@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import "my-needle-library";
-import { MyComponent } from "my-needle-library";
+import { MyComponent, onStart } from "my-needle-library";
+
+onStart((ctx) => {
+    console.log("Hello from My3dContent.vue using my-needle-library!", ctx);
+})
 
 function changeColor() {
     // MyComponent.
@@ -53,7 +57,9 @@ button {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transform: translateY(-2px);
     }
-    &:active, &:focus {
+
+    &:active,
+    &:focus {
         border: none;
         outline: 2px solid #4f91d8;
         outline-offset: 2px;

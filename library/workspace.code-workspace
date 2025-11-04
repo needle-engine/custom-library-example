@@ -4,6 +4,10 @@
 			"path": ".",
 		},
 		{
+		    "name": "Example Vue Project",
+			"path": "../usage-example",
+		},
+		{
 		    "name": "Needle Engine",
 			"path": "./node_modules/@needle-tools/engine",
 		}

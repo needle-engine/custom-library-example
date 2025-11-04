@@ -3,11 +3,11 @@ import("@needle-tools/engine") /* async import of needle engine */;
 import "./generated/register_types.js";
 
 
-// OPTIONAL: Expose your own components as part of the library
+// --- OPTIONAL: Expose your own components as part of the library
 export * from "./scripts/MyComponent.js";
 
 
-// OPTIONAL: Example code that runs when the library is imported
+// --- OPTIONAL: Example code that runs when the library is imported
 import { ObjectUtils, onStart } from "@needle-tools/engine";
 import { MyComponent } from "./scripts/MyComponent.js";
 
@@ -20,3 +20,7 @@ onStart(ctx => {
         cube.addComponent(MyComponent);
     }
 });
+
+
+// --- OPTIONAL: Expose Needle-Engine's onStart hook so that users of the library can also use it
+export { onStart };
