@@ -6,5 +6,10 @@ export default defineConfig({
   plugins: [vue()],
   optimizeDeps: {
     exclude: ["three-mesh-bvh"]
+  },
+  server: {
+    fs: {
+      allow: [".."]
+    }
   }
 })
